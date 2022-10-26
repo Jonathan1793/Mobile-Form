@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e51be847fe.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Mobile Form</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="nav-set">
+          <ul>
+            <li>&#9776;</li>
+            <li>Contacts</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+          </ul>
+        </div>
+      </nav>
+      <form action="submit">
+        <div>
+          <img
+            class="icon"
+            src="https://cdn-icons-png.flaticon.com/512/8089/8089114.png"
+            alt="contact"
+          />
+          <input type="text" placeholder="Name" class="input-underscore" />
+        </div>
+        <div class="phone">
+          <i class="fa-solid fa-phone"></i>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            class="input-normal"
+            placeholder="Phone Number"
+          />
+          <select name="label" id="label" class="input-normal">
+            <option value="label">Label</option>
+          </select>
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Address" class="input-underscore" />
+        </div>
+        <input
+          type="text"
+          placeholder="City"
+          class="input-normal align-inputs"
+        />
+        <div>
+          <select
+            name="state"
+            id="state"
+            class="input-underscore align-inputs select-holder"
+          >
+            <!-- prettier-ignore -->
+            <option value="" disabled selected hidden>State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+          <input
+            type="text"
+            name="zip"
+            id="zip"
+            placeholder="ZIP"
+            class="input-underscore"
+          />
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            class="input-normal"
+          />
+        </div>
+        <div>
+          <i class="fa-solid fa-cake-candles"></i>
+          <input
+            type="date"
+            class="input-underscore"
+            required
+            placeholder="Birthday"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

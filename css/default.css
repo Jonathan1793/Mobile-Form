@@ -1,0 +1,98 @@
+:root {
+  --nav-color: rgb(35, 3, 216);
+  --window-control-color: rgb(23, 0, 153);
+  --font-color-white: white;
+  --background-color-fade: rgb(240, 232, 232);
+  --font-input-normal: rgb(161, 161, 161);
+  --font-input-dark: rgb(59, 59, 59);
+  --font-family-normal: sans-serif;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  background-color: var(--nav-color);
+  color: white;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.nav-set {
+  margin-right: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.main-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0.5rem 1.775rem;
+}
+
+.input-normal {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  user-select: none;
+  width: 100%;
+}
+
+.input-normal::placeholder {
+  padding-left: 10px;
+}
+.input-underscore {
+  display: inline;
+  border-bottom: 1px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-radius: 2px 2px 0px 0px;
+  background-color: var(--background-color-fade);
+  width: 100%;
+  height: 40px;
+}
+
+.input-underscore::placeholder {
+  color: var(--font-input-dark);
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 10px;
+}
+form div {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+  user-select: none;
+  content: attr(placeholder) !important;
+}
+
+input[type="date"]:before {
+  color: var(--font-input-dark);
+  content: attr(placeholder) !important;
+  padding: 10px;
+  font-family: var(--font-family-normal);
+}
+input[type="date"]:focus:before {
+  content: "" !important;
+}
