@@ -1,13 +1,29 @@
 :root {
-  --nav-color: rgb(35, 3, 216);
-  --window-control-color: rgb(23, 0, 153);
+  --nav-color: rgb(98, 2, 238);
+  --window-control-color: rgb(75, 1, 209);
   --font-color-white: white;
-  --background-color-fade: rgb(240, 232, 232);
+  --background-color-fade: rgb(232, 232, 232);
   --font-input-normal: rgb(161, 161, 161);
-  --font-input-dark: rgb(59, 59, 59);
-  --font-family-normal: sans-serif;
+  --font-input-dark: rgb(92, 92, 92);
+  --font-family-normal: "Open-Sans", sans-serif;
 }
 
+.window-control {
+  background-color: var(--window-control-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
+  padding-right: 10px;
+}
+.wc-icon {
+  color: rgb(215, 183, 253);
+}
+.grow {
+  font-size: 31px;
+  position: relative;
+  bottom: 1.5px;
+}
 .icon {
   width: 20px;
   height: 20px;
@@ -17,12 +33,16 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 
 ul {
   display: flex;
   gap: 20px;
   padding: 0;
+  align-items: center;
 }
 
 nav {
@@ -31,6 +51,7 @@ nav {
   color: white;
   padding: 0 10px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .nav-set {
@@ -43,20 +64,30 @@ li {
 
 .main-container {
   max-width: 450px;
+  width: 95vw;
   margin: 0 auto;
-  padding: 0.5rem 1.775rem;
+  font-family: "Open Sans", sans-serif;
+  justify-content: center;
 }
 
 .input-normal {
-  border: 1px solid black;
+  border: 2px solid rgb(180, 176, 176);
   border-radius: 5px;
-  height: 40px;
+  height: 60px;
   user-select: none;
   width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.input-normal::placeholder {
+.input-normal::-webkit-input-placeholder {
   padding-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--font-input-normal);
+  font-family: var(--font-family-normal);
+  margin: 0 19px;
 }
 .input-underscore {
   display: inline;
@@ -67,18 +98,25 @@ li {
   border-radius: 2px 2px 0px 0px;
   background-color: var(--background-color-fade);
   width: 100%;
-  height: 40px;
+  height: 60px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0 19px;
 }
 
-.input-underscore::placeholder {
+.input-underscore::-webkit-input-placeholder {
   color: var(--font-input-dark);
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 16px;
   padding-left: 10px;
 }
 form div {
   display: flex;
   gap: 10px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 input[type="date"]:required:invalid::-webkit-datetime-edit {
@@ -92,6 +130,9 @@ input[type="date"]:before {
   content: attr(placeholder) !important;
   padding: 10px;
   font-family: var(--font-family-normal);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--font-input-dark);
 }
 input[type="date"]:focus:before {
   content: "" !important;

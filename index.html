@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/e51be847fe.js"
       crossorigin="anonymous"
@@ -15,6 +21,11 @@
 
   <body>
     <div class="main-container">
+      <div class="window-control">
+        <i class="fa-solid fa-square wc-icon"></i>
+        <i class="fa-solid fa-circle wc-icon"></i>
+        <i class="fa-solid fa-caret-down wc-icon grow"></i>
+      </div>
       <nav>
         <div class="nav-set">
           <ul>
@@ -29,37 +40,43 @@
           </ul>
         </div>
       </nav>
+
+      <!-- Start of Form  -->
       <form action="submit">
-        <div>
-          <img
-            class="icon"
-            src="https://cdn-icons-png.flaticon.com/512/8089/8089114.png"
-            alt="contact"
-          />
+        <div class="name-input">
+          <i class="fa-solid fa-user"></i>
           <input type="text" placeholder="Name" class="input-underscore" />
         </div>
         <div class="phone">
           <i class="fa-solid fa-phone"></i>
           <input
-            type="number"
+            type="text"
             name="phone"
             id="phone"
-            class="input-normal"
+            class="input-normal input-phone"
             placeholder="Phone Number"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            maxlength="10"
           />
-          <select name="label" id="label" class="input-normal">
+          <select name="label" id="label" class="input-normal input-label">
             <option value="label">Label</option>
           </select>
         </div>
         <div>
           <i class="fa-solid fa-location-dot"></i>
-          <input type="text" placeholder="Address" class="input-underscore" />
+          <input
+            type="text"
+            placeholder="Address"
+            class="input-underscore input-address"
+          />
         </div>
-        <input
-          type="text"
-          placeholder="City"
-          class="input-normal align-inputs"
-        />
+        <div>
+          <input
+            type="text"
+            placeholder="City"
+            class="input-normal city-inputs"
+          />
+        </div>
         <div>
           <select
             name="state"
@@ -125,7 +142,9 @@
             name="zip"
             id="zip"
             placeholder="ZIP"
-            class="input-underscore"
+            class="input-underscore input-zip"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            maxlength="5"
           />
         </div>
         <div>
@@ -135,7 +154,7 @@
             name="email"
             id="email"
             placeholder="Email"
-            class="input-normal"
+            class="input-normal input-email"
           />
         </div>
         <div>
